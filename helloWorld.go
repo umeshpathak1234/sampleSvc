@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"Users/god/Desktop/Golang/sampleSvc/api"
+	"github.com/umeshpathak1234/sampleSvc/api"
 
 	"github.com/google/logger"
 )
