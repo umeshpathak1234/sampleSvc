@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/logger"
 
-	check "github.com/sampleSvc/test"
+	check "github.com/umeshpathak1234/sampleSvc/test"
 )
 
 var x int = 42
