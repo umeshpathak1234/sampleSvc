@@ -10,6 +10,9 @@ func compute(fn func(float64, float64) float64) float64 {
 }
 
 func main() {
+	var y int
+	y = 10
+	fmt.Println(y)
 	hypot := func(x, y float64) float64 {
 		return math.Sqrt(x*x + y*y)
 	}
