@@ -5,11 +5,71 @@ import (
 )
 
 func main() {
-	exercise1()
-	exercise2n3()
-	exercise4()
-	exercise5()
+	//exercise1()
+	//exercise2n3()
+	//exercise4()
+	//exercise5()
+	//exercise6()
+	//exercise7()
+	exercise8910()
 }
+func exercise6() {
+	var states []string = []string{
+		` Alabama`, ` Alaska`, ` Arizona`, ` Arkansas`, ` California`, ` Colorado`, ` Connecticut`,
+		` Delaware`, ` Florida`, ` Georgia`, ` Hawaii`, ` Idaho`, ` Illinois`, ` Indiana`, ` Iowa`,
+		` Kansas`, ` Kentucky`, ` Louisiana`, ` Maine`, ` Maryland`, ` Massachusetts`, ` Michigan`,
+		` Minnesota`, ` Mississippi`, ` Missouri`, ` Montana`, ` Nebraska`, ` Nevada`, ` New Hampshire`,
+		` New Jersey`, ` New Mexico`, ` New York`, ` North Carolina`, ` North Dakota`, ` Ohio`, ` Oklahoma`,
+		` Oregon`, ` Pennsylvania`, ` Rhode Island`, ` South Carolina`, ` South Dakota`, ` Tennessee`,
+		` Texas`, ` Utah`, ` Vermont`, ` Virginia`, ` Washington`, ` West Virginia`, ` Wisconsin`, ` Wyoming`}
+
+	fmt.Println("The length of the slice is", len(states))
+	fmt.Println("The capacity of slice is", cap(states))
+	fmt.Println("Index \tName of States ")
+	for i := 0; i < len(states); i++ {
+		fmt.Println(i, "\t", states[i])
+	}
+	// fmt.Println("test ")
+	// for i, value := range states {
+	// 	fmt.Println(i, value)
+	// }
+}
+
+func exercise7() {
+	var name1 []string = []string{"James", "Bond", "Shaken, not stirred"}
+	var name2 []string = []string{"Miss", "Moneypenny", "Helloooooo, James."}
+	var mdname [][]string = [][]string{name1, name2}
+	fmt.Println(mdname)
+
+	for i, ns := range mdname {
+		fmt.Println("record \t", i)
+		fmt.Println(ns)
+		for j, newslice := range ns {
+			fmt.Println("index \t", j, newslice)
+		}
+	}
+
+}
+func exercise8910() {
+	lastname := map[string][]string{
+		"bond_james":      []string{`Shaken, not stirred`, `Martinis`, `Women`},
+		"moneypenny_miss": []string{`James Bond`, `Literature`, `Computer Science`},
+		"no_dr":           []string{`Being evil`, `Ice cream`, `Sunsets`},
+	}
+	//adding a record in a map
+	lastname["check"] = []string{`one, two`, `three`, `four`}
+	//deleting a record from a map
+	delete(lastname, "no_dr")
+	//fmt.Println(lastname["no_dr"])
+	for i, data := range lastname {
+		fmt.Println("Lastname is \t", i)
+		for j, mdata := range data {
+			fmt.Println(" \t", j, mdata)
+		}
+
+	}
+}
+
 func exercise1() {
 	fmt.Println("**************  Exercise 1  **********")
 	var b [5]int
